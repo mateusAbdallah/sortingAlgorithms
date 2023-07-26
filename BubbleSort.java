@@ -1,25 +1,49 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 public class BubbleSort {
-	
+
 	public BubbleSort() {
 
-		int[] arr = {12, 1, 21, 11, 34, 41, 10, 3};
+		int[] numbersArray = null;
+		Scanner input = new Scanner(System.in);
 
-		for(int i = 0; i < arr.length - 1; i++) {
-			for(int j = 0; j < arr.length - 1; j++) {
-				if(arr[j] > arr[j+1]) {
-					int temp = arr[j];
-					arr[j] = arr[j+1];
-					arr[j+1] = temp;
+		System.out.print("How many numbers do you want to put into the list? ");
+		int numb = input.nextInt();
+		numbersArray = new int[numb];
+
+		for(int a = 0; a < numbersArray.length; a++) {
+			System.out.print("Enter number " + (a+1) + " >> ");
+			numbersArray[a] = input.nextInt();
+		}
+		System.out.println("***\s***\s***");
+		System.out.print("The initial array is: ");
+		for(int x: numbersArray) {
+
+			System.out.print(x + " ");
+		}
+		System.out.println();
+
+		for(int i = 0; i < numbersArray.length - 1; i++) {
+			for(int j = 0; j < numbersArray.length - 1; j++) {
+				if(numbersArray[j] > numbersArray[j+1]) {
+					int temp = numbersArray[j];
+					numbersArray[j] = numbersArray[j+1];
+					numbersArray[j+1] = temp;
 				}
 			}
 		}
-		
-		for(int a : arr) {
+		System.out.println("***\s***\s***");
+		System.out.print("The sort array is: ");
+		for(int a : numbersArray) {
 			System.out.print(a + " ");
 		}
+
+
+
 	}
 
-	
+
 
 }
