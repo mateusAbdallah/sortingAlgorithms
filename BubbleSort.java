@@ -15,13 +15,7 @@ public class BubbleSort {
 			System.out.print("Enter number " + (a+1) + " >> ");
 			numbersArray[a] = input.nextInt();
 		}
-		//System.out.println("***\s***\s***");
-		//System.out.print("The initial array is: ");
-		//for(int x: numbersArray) {
 
-		//	System.out.print(x + " ");
-		//}
-		//System.out.println();
 		displayIteration(numbersArray, 0);
 		for(int i = 0; i < numbersArray.length - 1; i++) {
 			for(int j = 0; j < numbersArray.length - 1; j++) {
@@ -33,12 +27,7 @@ public class BubbleSort {
 			}
 			displayIteration(numbersArray, (i+1));
 		}
-		//System.out.println("***\s***\s***");
-		//System.out.print("The sort array is: ");
-		//for(int a : numbersArray) {
-		//	System.out.print(a + " ");
-		//} 
-
+		
 	}
 	
 	static void displayIteration(int[] arr, int x) {
