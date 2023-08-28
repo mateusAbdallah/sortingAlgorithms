@@ -1,8 +1,23 @@
+import java.util.Scanner;
 
 public class InsertionSort {
 	
 	public InsertionSort() {
-		int arr[] = {21, 3, 11, 5, 53, 32};
+		
+		int[] arr = null;
+		Scanner input = new Scanner(System.in);
+		
+		System.out.print("How many numbers do you want to add into the array? >> ");
+		int num = input.nextInt();
+		arr = new int[num];
+		
+		for(int i = 0; i < arr.length; i++) {
+			System.out.print("Enter number " + (i+1) + " >> ");
+			arr[i] = input.nextInt();					
+		}
+		
+		
+		//int arr[] = {21, 3, 11, 5, 53, 32};
 		
 		System.out.println("Before the insertion method");
 		for(int i:arr) {
