@@ -17,19 +17,19 @@ public class InsertionSort {
 		}
 		
 		
-		//int arr[] = {21, 3, 11, 5, 53, 32};
-		
 		System.out.println("Before the insertion method");
 		for(int i:arr) {
 			System.out.print(i + " ");
 		}
-		System.out.println("\n-----------");
+		System.out.println("\n-----------------------");
 		System.out.println("After insertion method");
+		
 		insertionSort(arr);
-	
+		
 		for(int j:arr) {
 			System.out.print(j + " ");
 		}
+		
 	}
 	
 	static void insertionSort(int[] arr) {
@@ -41,7 +41,16 @@ public class InsertionSort {
 				j--;
 			}
 			arr[j + 1] = temp;
+			
 		}
+	}
+	
+	static void displayIteration(int[] arr, int x) {
+		System.out.print("Iteration " + x + " >> ");
+		for(int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i] + " ");
+		}
+		System.out.println();
 	}
 
 }
